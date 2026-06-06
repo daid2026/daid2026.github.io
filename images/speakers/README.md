@@ -1,6 +1,7 @@
 Add speaker headshots here with these exact filenames:
 - tim-kraska.jpg
 - dan-roth.jpg
+- aditya-parameswaran.jpg
 - zhou-yu.jpg
 - sujith-ravi.jpg
 - shafiq-joty.jpg
