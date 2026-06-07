@@ -233,46 +233,81 @@ h1 {
 }
 
 .topics-section {
-  background: #dce8ef;
+  background:
+    linear-gradient(180deg, rgba(255, 253, 248, 0.62), rgba(255, 253, 248, 0.18)),
+    #dce8ef;
 }
 
 .topics-kicker {
-  margin: 0 0 0.55rem;
-  text-align: center;
+  display: inline-flex;
+  align-items: center;
+  margin: 0 0 0.65rem;
+  padding: 0.28rem 0.62rem;
+  border: 1px solid rgba(15, 108, 123, 0.24);
+  border-radius: 999px;
+  background: rgba(255, 253, 248, 0.72);
   text-transform: uppercase;
-  letter-spacing: 0.05em;
-  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  letter-spacing: 0.08em;
+  font-size: 0.76rem;
   font-weight: 700;
-  color: #12161d;
+  color: #145c68;
 }
 
 .topics-section h2 {
   margin: 0;
-  text-transform: uppercase;
-  font-size: clamp(1.55rem, 2.8vw, 2.2rem);
-  color: #12161d;
+  max-width: 14ch;
+  font-size: clamp(1.75rem, 3.1vw, 2.45rem);
+  color: #15222c;
 }
 
 .topics-intro {
-  margin: 0.8rem 0 1.3rem;
+  margin: 0.75rem 0 1.45rem;
   font-size: 1.08rem;
-  max-width: 78ch;
+  max-width: 72ch;
+  color: #33434c;
 }
 
 .topics-list {
+  counter-reset: topic;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
   margin: 0;
-  padding-left: 1.45rem;
+  padding: 0;
+  list-style: none;
 }
 
-.topics-list li {
-  margin-bottom: 0.95rem;
+.topics-list > li {
+  position: relative;
+  counter-increment: topic;
+  margin: 0;
+  padding: 1rem 1.05rem 1.05rem;
+  border: 1px solid rgba(31, 44, 53, 0.12);
+  border-radius: 10px;
+  background: rgba(255, 253, 248, 0.82);
+  box-shadow: 0 10px 22px rgba(21, 39, 48, 0.05);
+}
+
+.topics-list > li::before {
+  content: counter(topic, decimal-leading-zero);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  margin-bottom: 0.7rem;
+  border-radius: 50%;
+  background: var(--accent-soft);
+  color: #145c68;
+  font-size: 0.78rem;
+  font-weight: 700;
 }
 
 .topics-list h3 {
   margin: 0;
   font-family: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  font-size: clamp(1.15rem, 2.2vw, 1.6rem);
-  line-height: 1.25;
+  font-size: clamp(1.02rem, 1.7vw, 1.22rem);
+  line-height: 1.28;
   color: #0f151d;
 }
 
@@ -284,15 +319,29 @@ h1 {
 }
 
 .topics-sublist {
-  margin: 0.34rem 0 0;
-  padding-left: 1.2rem;
+  margin: 0.72rem 0 0;
+  padding: 0;
+  list-style: none;
 }
 
 .topics-sublist li {
-  margin: 0.2rem 0;
-  font-size: 1.02rem;
-  line-height: 1.5;
+  position: relative;
+  margin: 0.42rem 0;
+  padding-left: 0.95rem;
+  font-size: 0.98rem;
+  line-height: 1.48;
   color: #1d2730;
+}
+
+.topics-sublist li::before {
+  content: "";
+  position: absolute;
+  top: 0.68em;
+  left: 0;
+  width: 0.34rem;
+  height: 0.34rem;
+  border-radius: 50%;
+  background: var(--highlight);
 }
 
 .grid {
@@ -548,6 +597,14 @@ img.organizer-photo {
 
   .topics-kicker {
     text-align: left;
+  }
+
+  .topics-section h2 {
+    max-width: none;
+  }
+
+  .topics-list {
+    grid-template-columns: 1fr;
   }
 
   .pc-list {
