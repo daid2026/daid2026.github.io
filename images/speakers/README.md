@@ -2,7 +2,7 @@ Add speaker headshots here with these exact filenames:
 - tim-kraska.jpg
 - caiming-xiong.jpg
 - dan-roth.jpg
-- aditya-parameswaran.jpg
+- georgia-koutrika.jpg
 - zhou-yu.jpg
 - sujith-ravi.jpg
 - shafiq-joty.jpg
