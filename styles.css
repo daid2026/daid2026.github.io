@@ -444,6 +444,31 @@ img.organizer-photo {
   gap: 1.1rem 1.3rem;
 }
 
+.pc-list {
+  column-count: 2;
+  column-gap: 2.5rem;
+  margin: 1rem 0 0;
+  padding-left: 1.2rem;
+}
+
+.pc-note {
+  margin: 0 0 1rem;
+  max-width: 68ch;
+  color: var(--muted);
+}
+
+.pc-list li {
+  break-inside: avoid;
+  margin: 0 0 0.42rem;
+  color: var(--muted);
+  line-height: 1.4;
+}
+
+.pc-name {
+  color: var(--ink);
+  font-weight: 600;
+}
+
 .organizer-item {
   padding: 0.15rem 0.1rem;
 }
@@ -523,6 +548,10 @@ img.organizer-photo {
 
   .topics-kicker {
     text-align: left;
+  }
+
+  .pc-list {
+    column-count: 1;
   }
 }
 
