@@ -258,6 +258,7 @@ h1 {
   max-width: none;
   font-size: clamp(1.65rem, 2.7vw, 2.15rem);
   color: #15222c;
+  white-space: nowrap;
 }
 
 .topics-intro {
@@ -604,6 +605,7 @@ img.organizer-photo {
 
   .topics-section h2 {
     max-width: none;
+    white-space: normal;
   }
 
   .topics-list {
