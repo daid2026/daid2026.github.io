@@ -255,14 +255,14 @@ h1 {
 
 .topics-section h2 {
   margin: 0;
-  max-width: 14ch;
-  font-size: clamp(1.75rem, 3.1vw, 2.45rem);
+  max-width: none;
+  font-size: clamp(1.65rem, 2.7vw, 2.15rem);
   color: #15222c;
 }
 
 .topics-intro {
-  margin: 0.75rem 0 1.45rem;
-  font-size: 1.08rem;
+  margin: 0.55rem 0 1.05rem;
+  font-size: 1.02rem;
   max-width: 72ch;
   color: #33434c;
 }
@@ -271,7 +271,7 @@ h1 {
   counter-reset: topic;
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1rem;
+  gap: 0.78rem;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -281,7 +281,7 @@ h1 {
   position: relative;
   counter-increment: topic;
   margin: 0;
-  padding: 1rem 1.05rem 1.05rem;
+  padding: 0.82rem 0.95rem 0.88rem;
   border: 1px solid rgba(31, 44, 53, 0.12);
   border-radius: 10px;
   background: rgba(255, 253, 248, 0.82);
@@ -290,23 +290,26 @@ h1 {
 
 .topics-list > li::before {
   content: counter(topic, decimal-leading-zero);
-  display: inline-flex;
+  position: absolute;
+  top: 0.86rem;
+  left: 0.95rem;
+  display: flex;
   align-items: center;
   justify-content: center;
-  width: 2rem;
-  height: 2rem;
-  margin-bottom: 0.7rem;
+  width: 1.55rem;
+  height: 1.55rem;
   border-radius: 50%;
   background: var(--accent-soft);
   color: #145c68;
-  font-size: 0.78rem;
+  font-size: 0.68rem;
   font-weight: 700;
 }
 
 .topics-list h3 {
   margin: 0;
+  padding-left: 2.1rem;
   font-family: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  font-size: clamp(1.02rem, 1.7vw, 1.22rem);
+  font-size: clamp(0.98rem, 1.45vw, 1.12rem);
   line-height: 1.28;
   color: #0f151d;
 }
@@ -319,17 +322,17 @@ h1 {
 }
 
 .topics-sublist {
-  margin: 0.72rem 0 0;
+  margin: 0.56rem 0 0;
   padding: 0;
   list-style: none;
 }
 
 .topics-sublist li {
   position: relative;
-  margin: 0.42rem 0;
-  padding-left: 0.95rem;
-  font-size: 0.98rem;
-  line-height: 1.48;
+  margin: 0.28rem 0;
+  padding-left: 0.85rem;
+  font-size: 0.94rem;
+  line-height: 1.42;
   color: #1d2730;
 }
 
